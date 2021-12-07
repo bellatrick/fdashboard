@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useContext,useEffect} from 'react'
 import ProfileDropDown from "../components/ProfileDropDown";
 import {
     BellIcon,
@@ -8,9 +8,33 @@ import {
   import {
     SearchIcon,
   } from "@heroicons/react/solid";
+import {Store} from '../context/store'
+const filterResults = (list, keyword) => {
+  return list.filter((x) => {
+    const a = x?.name?.toLowerCase();
+    const b = x?.desc?.toLowerCase();
+    const c = x?.price?.toLowerCase();
+    const d = x?.category?.toLowerCase();
+    const arr = [a, b, c,d];
+    return arr.some((word) => word.includes(keyword.toLowerCase()));
+  });
+};
 
 const HeadNav = ({setSidebarOpen}) => {
-
+  const [keyword, setKeyword] = useState("");
+  const [list,setNewList]=useState(false)
+const {dispatch,state}=useContext(Store)
+  const handleChange=(e)=>{
+    setKeyword(e.target.value)
+    dispatch({type:'GET_PRODUCT_LIST',payload:list})
+  }
+  useEffect(() => {
+    if(state.productList){
+    const result=  filterResults(keyword,state.productList)
+    setNewList(result)
+    }
+ 
+  }, [state.productList,keyword])
     return (
 
            <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200 lg:border-none">
@@ -36,6 +60,8 @@ const HeadNav = ({setSidebarOpen}) => {
                   <input
                     id="search"
                     name="search"
+                    value={keyword}
+                    onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-100 bg-opacity-25 text-indigo-100 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 border-gray-300 sm:text-sm"
                     placeholder="Search"
                     type="search"
