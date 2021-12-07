@@ -1,6 +1,6 @@
 import { useContext, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "./LoadingSpinner";
 import { Store } from "../context/store";
 import EmptyState from "./EmptyState";
 import Paginate from "./Paginate";
@@ -28,10 +28,10 @@ export default function TableList({ loading }) {
     navigate("/product/edit");
   };
   if (loading || !state.productList) {
-    console.log('that happened')
+
     return (
-      <div className="mx-auto mt-32 text-9xl">
-       loading
+      <div className="mx-auto mt-32">
+        <LoadingSpinner height={"32"} width={"32"} />
       </div>
     );
   }

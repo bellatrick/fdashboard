@@ -134,7 +134,7 @@ export default function Example() {
                     <LoadingSpinner
                       height={"6"}
                       width={"5"}
-                      color={"bg-white"}
+                      
                     />
                   ) : (
                     "Sign in"
