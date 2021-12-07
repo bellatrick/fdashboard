@@ -29,16 +29,15 @@ export default function TableList({ loading }) {
     navigate("/product/edit");
   };
   if (loading || !state.productList) {
-
     return (
-      <div className="mx-auto mt-32">
-          <Loader
-        type="Puff"
-        color="#037662"
-        height={100}
-        width={100}
-        timeout={5000} 
-      />
+      <div className="mx-auto mt-32 flex items-center justify-center">
+        <Loader
+          type="Puff"
+          color="#037662"
+          height={100}
+          width={100}
+          timeout={5000}
+        />
       </div>
     );
   }
