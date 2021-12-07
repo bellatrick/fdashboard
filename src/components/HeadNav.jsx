@@ -30,7 +30,7 @@ const {dispatch,state}=useContext(Store)
   }
   useEffect(() => {
     if(state.productList){
-    const result=  filterResults(keyword,state.productList)
+    const result=  filterResults(state.productList,keyword)
     setNewList(result)
     }
  
