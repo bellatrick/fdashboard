@@ -9,6 +9,7 @@ import Category from './pages/Category'
 import Login from './pages/Login'
 import Signup from './pages/Registration'
 import Messages from './pages/Messages'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 function App() {
   return (
     <StoreProvider>

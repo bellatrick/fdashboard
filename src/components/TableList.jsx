@@ -1,9 +1,10 @@
 import { useContext, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoadingSpinner from "./LoadingSpinner";
+// import LoadingSpinner from "./LoadingSpinner";
 import { Store } from "../context/store";
 import EmptyState from "./EmptyState";
 import Paginate from "./Paginate";
+import Loader from "react-loader-spinner";
 let PageSize = 20;
 export default function TableList({ loading }) {
   const navigate = useNavigate();
@@ -31,7 +32,13 @@ export default function TableList({ loading }) {
 
     return (
       <div className="mx-auto mt-32">
-        <LoadingSpinner height={"32"} width={"32"} />
+          <Loader
+        type="Puff"
+        color="#037662"
+        height={100}
+        width={100}
+        timeout={5000} 
+      />
       </div>
     );
   }
