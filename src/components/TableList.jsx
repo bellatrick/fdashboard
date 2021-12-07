@@ -30,8 +30,8 @@ export default function TableList({ loading }) {
   if (loading || !state.productList) {
     console.log('that happened')
     return (
-      <div className="mx-auto mt-32">
-        <LoadingSpinner height={"32"} width={"32"} color={"green-800"} />
+      <div className="mx-auto mt-32 text-9xl">
+       loading
       </div>
     );
   }
