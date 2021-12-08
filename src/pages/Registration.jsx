@@ -150,7 +150,7 @@ export default function Example() {
                       color={"bg-white"}
                     />
                   ) : (
-                    "Sign in"
+                    "Sign Up"
                   )}
                 </button>
                 <p className='mt-6 text-sm text-bold'>Already have an account? <Link className='text-green-600' to='/'>Sign In</Link></p>

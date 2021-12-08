@@ -20,6 +20,7 @@ const initalState = {
     : null,
   product: {},
   productList: null,
+  search: false,
 };
 
 const reducer = (state, action) => {
@@ -37,10 +38,13 @@ const reducer = (state, action) => {
       return { ...state, product: { ...state.product, images: newImageList } };
     case "GET_PRODUCT_LIST":
       return { ...state, productList: action.payload };
+    case "SEARCHING":
+      return { ...state, search: true };
     default:
       return state;
   }
 };
+
 
 export const StoreProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, initalState);
@@ -69,6 +73,18 @@ export const StoreProvider = (props) => {
     localStorage.setItem("food_expirationTime", expirationTime);
   };
 
+  const NGFormat = new Intl.NumberFormat(undefined, {
+  style: 'currency',
+  currency: 'NGN',
+
+
+});
+const EUFormat = new Intl.NumberFormat(undefined, {
+  style: 'currency',
+  currency: 'EUR',
+
+
+});
   useEffect(() => {
     retrieveStoredToken();
     if (tokenData) {
@@ -86,6 +102,7 @@ export const StoreProvider = (props) => {
     setToken,
     logoutHandler,
     userIsLoggedIn,
+    NGFormat,EUFormat
   };
   return <Store.Provider value={value}>{props.children}</Store.Provider>;
 };

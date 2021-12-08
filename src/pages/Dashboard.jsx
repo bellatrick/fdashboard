@@ -6,7 +6,7 @@ import TableList from "../components/TableList";
 import ShippingModal from '../components/ShippingModal'
 import { Store } from "../context/store";
 export default function Dashboard() {
-  const {dispatch}= useContext(Store)
+  const {dispatch,NGFormat,EUFormat}= useContext(Store)
   const { loading, data } = useQuery(FETCH_PRODUCTS_QUERY);
   const { loading:shippingLoading, data:shippingData } = useQuery(FETCH_SHIPPING);
 
@@ -27,8 +27,8 @@ export default function Dashboard() {
         <div className='flex items-center'>
         <div className=' font-semibold mr-7 '>
             {" "}
-            <p className='mt-2'>Nigeria to Uk: {shippingData?.getShipping[0].nigeriaToUK}</p>
-            <p className='mt-2'>UK to Nigeria: {shippingData?.getShipping[0].uKToNigeria} </p>
+            <p className='mt-2'>Nigeria to Uk:  {NGFormat.format( shippingData?.getShipping[0].nigeriaToUK)}</p>
+            <p className='mt-2'>UK to Nigeria:  {EUFormat.format( shippingData?.getShipping[0].uKToNigeria)} </p>
           </div>
           <div onClick={()=>setOpen(true)} className="mt-2 py-2 w-20 rounded-2xl text-center text-white bg-green-700 hover:bg-green-800 cursor-pointer">
             Edit

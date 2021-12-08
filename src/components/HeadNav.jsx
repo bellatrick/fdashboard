@@ -27,6 +27,7 @@ const {dispatch,state}=useContext(Store)
   const handleChange=(e)=>{
     setKeyword(e.target.value)
     dispatch({type:'GET_PRODUCT_LIST',payload:list})
+    dispatch({type:'SEARCHING'})
   }
   useEffect(() => {
     if(state.productList){

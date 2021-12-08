@@ -337,10 +337,10 @@ const AddProduct = () => {
             />
           </div>
         </div>
-        <div className="sm:px-16 mt-8 mx-auto flex flex-col sm:flex-row">
+        <div className="sm:px-16 mt-8 mx-auto flex flex-col sm:flex-row items-center justify-center">
           <button
             type="submit"
-            className="inline-flex justify-center w-72 rounded-md border border-transparent shadow-sm  py-2 bg-green-800 tracking-wide font-medium text-white hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
+            className="inline-flex justify-center mb-5 sm:mb-0 w-72 rounded-md border border-transparent shadow-sm  py-2 bg-green-800 tracking-wide font-medium text-white hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
           >
             {loading ? (
               <LoadingSpinner height={"6"} width={"5"} color={"bg-green-200"} />
@@ -354,7 +354,7 @@ const AddProduct = () => {
               await deleteProduct();
               navigate("/");
             }}
-            className="inline-flex ml-5 justify-center w-72 rounded-md border border-transparent shadow-sm  py-2 bg-red-700 tracking-wide font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
+            className="inline-flex sm:ml-5  justify-center w-72 rounded-md border border-transparent shadow-sm  py-2 bg-red-700 tracking-wide font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
           >
             {deleteLoading ? (
               <LoadingSpinner height={"6"} width={"5"} color={"bg-green-200"} />

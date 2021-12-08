@@ -100,8 +100,8 @@ export default function ShippingModal({ open, setOpen,id }) {
                   <div className="mr-6 mt-4 w-full">
                     <CustomInput
                       label="UK TO NIGERIA"
-                      type="type"
-                     placeholder='€100'
+                      type="number"
+                     placeholder='In Euros'
                       id="name"
                       name="name"
                       value={UK}
@@ -112,8 +112,8 @@ export default function ShippingModal({ open, setOpen,id }) {
                   <div className="mr-6 mt-4 w-full">
                     <CustomInput
                       label=" NIGERIA TO UK"
-                      type="type"
-                      placeholder='N1000'
+                      type="number"
+                      placeholder='In Naira'
                       id="name"
                       name="name"
                       value={Nigeria}

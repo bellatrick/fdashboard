@@ -8,7 +8,7 @@ import Loader from "react-loader-spinner";
 let PageSize = 20;
 export default function TableList({ loading }) {
   const navigate = useNavigate();
-  const { dispatch, state } = useContext(Store);
+  const { dispatch, state,NGFormat,EUFormat } = useContext(Store);
   const [currentPage, setCurrentPage] = useState(1);
   const currentData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
@@ -33,7 +33,7 @@ export default function TableList({ loading }) {
       <div className="mx-auto mt-32 flex items-center justify-center">
         <Loader
           type="Puff"
-          color="#037662"
+          color="#31C9AE"
           height={100}
           width={100}
           timeout={5000}
@@ -41,7 +41,14 @@ export default function TableList({ loading }) {
       </div>
     );
   }
-  if (state.productList.length <= 0) {
+   else if (state.productList <= 0 && state.search) {
+    return (
+      <h1 className="flex items-center py-5 justify-center align-middle text-green-800 text-3xl font-bold h-full">
+        No product found
+      </h1>
+    );
+  }
+  if (state.productList.length <= 0 && !state.search) {
     return <EmptyState state={"Product"} to={"/products"} />;
   } else
     return (
@@ -113,8 +120,8 @@ export default function TableList({ loading }) {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 w-32">
                           {person.location === "UK"
-                            ? `€ ${person.price}`
-                            : `N ${person.price}`}
+                            ? EUFormat.format(person.price)
+                            :  NGFormat.format(person.price)}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {person.location}
