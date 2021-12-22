@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Store } from "../context/store";
 import EmptyState from "./EmptyState";
 import Paginate from "./Paginate";
-import Loader from "react-loader-spinner";
+import loader from '../assets/loader.gif'
 let PageSize = 20;
 export default function TableList({ loading }) {
   const navigate = useNavigate();
@@ -30,14 +30,8 @@ export default function TableList({ loading }) {
   };
   if (loading || !state.productList) {
     return (
-      <div className="mx-auto mt-32 flex items-center justify-center">
-        <Loader
-          type="Puff"
-          color="#31C9AE"
-          height={100}
-          width={100}
-          timeout={5000}
-        />
+      <div className="mx-auto flex items-center justify-center bg-white h-screen w-full">
+      <img src={loader} alt=''/>
       </div>
     );
   }

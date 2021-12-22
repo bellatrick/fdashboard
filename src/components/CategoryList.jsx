@@ -1,15 +1,16 @@
-import {useState} from 'react'
+import { useState } from "react";
 import EmptyState from "./EmptyState";
-import LoadingSpinner from "./LoadingSpinner";
+
 import { CancelRounded } from "@material-ui/icons";
-import DeleteModal from './DeleteModal'
+import DeleteModal from "./DeleteModal";
+import loader from "../assets/loader.gif";
 export default function CategoryList({ data, loading }) {
-    const [open, setOpen] = useState(false)
-  const [id,setID] =useState('')
+  const [open, setOpen] = useState(false);
+  const [id, setID] = useState("");
   if (loading || !data) {
     return (
-      <div className="mx-auto mt-32">
-        <LoadingSpinner height={"32"} width={"32"} color={"green-800"} />
+      <div className="mx-auto mt-4 flex items-center justify-center bg-white h-screen w-full">
+        <img src={loader} alt="" />
       </div>
     );
   }
@@ -36,15 +37,21 @@ export default function CategoryList({ data, loading }) {
                   <p className="text-base text-center font-medium">
                     {product.name}
                   </p>
-                  <p onClick={()=>{
-                    setID(product.id)
-                    setOpen(true)}} className='hover:text-red-700 cursor-pointer'><CancelRounded/></p>
+                  <p
+                    onClick={() => {
+                      setID(product.id);
+                      setOpen(true);
+                    }}
+                    className="hover:text-red-700 cursor-pointer"
+                  >
+                    <CancelRounded />
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <DeleteModal id={id} open={open} setOpen={setOpen}/>
+        <DeleteModal id={id} open={open} setOpen={setOpen} />
       </div>
     );
 }

@@ -1,7 +1,7 @@
 import EmptyState from "./EmptyState";
 import Paginate from "./Paginate";
 import { useState, useMemo } from "react";
-import Loader from "react-loader-spinner";
+import loader from '../assets/loader.gif'
 import MessageModal from "./MessageModal";
 let PageSize = 20;
 export default function MessageList({ loading, data }) {
@@ -23,14 +23,8 @@ export default function MessageList({ loading, data }) {
   }, [currentPage, data?.getMessages]);
   if (loading) {
     return (
-      <div className="mx-auto mt-32 flex items-center justify-center">
-        <Loader
-          type="Puff"
-          color="#31C9AE"
-          height={100}
-          width={100}
-          timeout={5000}
-        />
+      <div className="mx-auto flex items-center justify-center bg-white h-screen w-full">
+       <img src={loader} alt=''/>
       </div>
     );
   }
@@ -38,8 +32,8 @@ export default function MessageList({ loading, data }) {
     return <EmptyState state={"Messages"} to={false} />;
   } else
     return (
-      <div className="flex flex-col mt-10 px-16">
-        <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div className="flex flex-col mt-10 px-4">
+        <div className="-my-2 overflow-x-auto -mx-2 sm:-mx-6 lg:-mx-8">
           <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
