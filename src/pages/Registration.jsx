@@ -2,7 +2,7 @@ import CustomInput from "../components/CustomInput";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import { useState } from "react";
-
+import logo from '../assets/logo.png'
 import { useNavigate,Link } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { toast } from "react-toastify";
@@ -46,8 +46,8 @@ export default function Example() {
       <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            className="mx-auto h-32 w-32"
+            src={logo}
             alt="Workflow"
           />
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

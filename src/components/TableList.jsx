@@ -43,7 +43,7 @@ export default function TableList({ loading }) {
     );
   }
   if (state.productList.length <= 0 && !state.search) {
-    return <EmptyState state={"Product"} to={"/products"} />;
+    return <EmptyState state={"Product"} to={"/addproduct"} />;
   } else
     return (
       <div className="flex flex-col mt-10 px-4">

@@ -7,6 +7,7 @@ import {
   Description,
   GroupWork
 } from "@material-ui/icons";
+import logo from '../assets/logo.png'
 import {Store} from '../context/store'
 
 const navigation1 = [
@@ -31,8 +32,8 @@ const DeskTopBar = () => {
         <div className="flex flex-col flex-grow bg-green-800 pt-5 pb-4 overflow-y-auto relative">
           <div className="flex items-center flex-shrink-0 -ml-10" >
             <img
-              className="h-6 w-40 mb-5 mx-auto"
-              src=''
+              className="h-20 w-20 mb-5 mx-auto"
+              src={logo}
               alt="logo"
             />
           </div>

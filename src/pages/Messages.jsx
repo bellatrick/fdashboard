@@ -8,6 +8,7 @@ const Messages = () => {
 
     return (
         <Layout>
+            
             <MessageList loading={loading} data={data}/>
         </Layout>
     )

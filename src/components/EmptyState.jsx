@@ -1,6 +1,6 @@
 import { PlusIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
-export default function EmptyState({ state, to }) {
+export default function EmptyState({ state, to,add }) {
   return (
     <div className="text-center">
       <svg
@@ -19,7 +19,7 @@ export default function EmptyState({ state, to }) {
         />
       </svg>
       <h3 className="mt-2 text-sm font-medium text-gray-900">{`No ${state}`}</h3>
-      <p className="mt-1 text-sm text-gray-500">{`Get Started By Creating a New ${state}.`}</p>
+      {add?<p className="mt-1 text-sm text-gray-500">{`Get Started By Creating a New ${state}.`}</p>:''}
       <div className="mt-6">
         {to ? (
           <Link

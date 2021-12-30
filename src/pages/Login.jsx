@@ -7,6 +7,7 @@ import { Store } from "../context/store";
 import { useNavigate, Link } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { toast } from "react-toastify";
+import logo from '../assets/logo.png'
 export default function Example() {
   const navigate = useNavigate();
   const { loginHandler, userIsLoggedIn } = useContext(Store);
@@ -57,8 +58,8 @@ export default function Example() {
       <div className="h-full  flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto  sm:w-full sm:max-w-md">
           <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            className="mx-auto h-32 w-32"
+            src={logo}
             alt="Workflow"
           />
           <h2 className="mt-6 text-center text-3xl font-extrabold text-green-700">

@@ -14,6 +14,7 @@ import {
   } from "@material-ui/icons";
   import {Store} from '../context/store'
   import { NavLink as BaseNavLink } from "react-router-dom";
+  import logo from '../assets/logo.png'
   const navigation1 = [
     { name: "Products", href: "/products", icon: Dashboard, exact:true },
     { name: "Add New Product", href: "/addproduct", icon: Add,exact:true },   
@@ -78,8 +79,8 @@ const MenuBar = ({sidebarOpen, setSidebarOpen}) => {
               </Transition.Child>
               <div className="flex-shrink-0 flex items-center px-4">
                 <img
-                  className="h-7 w-auto"
-                  src=''
+                  className="h-20 w-20"
+                  src={logo}
                   alt="logo"
                 />
               </div>

@@ -29,7 +29,9 @@ export default function MessageList({ loading, data }) {
     );
   }
   if (data?.getMessages?.length <= 0) {
-    return <EmptyState state={"Messages"} to={false} />;
+    return <div className='mt-20'>
+      <EmptyState state={"Messages"} to={false} add={false}/>;
+    </div>
   } else
     return (
       <div className="flex flex-col mt-10 px-4">
