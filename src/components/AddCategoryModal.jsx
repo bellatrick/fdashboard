@@ -179,8 +179,7 @@ export default function Example({ open, setOpen }) {
                       )}
                     </button>
                     <p className="text-sm text-bold tracking-wider pb-10 text-blue-600">
-                      Click the upload image button after selecting all the
-                      images you'd like to upload for this product.
+                      Click the upload image button after choosing an image for this category.
                     </p>
                   </div>
                   <div className="mr-6 w-full">
