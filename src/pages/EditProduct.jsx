@@ -206,6 +206,7 @@ const AddProduct = () => {
                     <p
                       onClick={() => {
                         dispatch({ type: "DELETE_PRODUCT_IMAGE", payload: i });
+                        
                       }}
                       className="bg-blue-600 w-28 font-bold tracking-wider text-white text-sm mt-3 rounded-3xl text-center py-2 hover:bg-gray-800"
                     >
@@ -352,6 +353,7 @@ const AddProduct = () => {
             type="button"
             onClick={async () => {
               await deleteProduct();
+              toast.success(`${productDetails.name} has been deleted`)
               navigate("/");
             }}
             className="inline-flex sm:ml-5  justify-center w-72 rounded-md border border-transparent shadow-sm  py-2 bg-red-700 tracking-wide font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "

@@ -31,7 +31,7 @@ function App() {
         newestOnTop={false}
         closeOnClick
         rtl={false}
-        theme="colored"
+
         pauseOnFocusLoss
         draggable
         pauseOnHover

@@ -27,7 +27,7 @@ export default function Dashboard() {
         <div className='flex items-center'>
         <div className=' font-semibold mr-7 '>
             {" "}
-            <p className='mt-2'>Nigeria to Uk:  {NGFormat.format( shippingData?.getShipping[0].nigeriaToUK)}</p>
+            <p className='mt-2'>Nigeria to UK:  {NGFormat.format( shippingData?.getShipping[0].nigeriaToUK)}</p>
             <p className='mt-2'>UK to Nigeria:  {EUFormat.format( shippingData?.getShipping[0].uKToNigeria)} </p>
           </div>
           <div onClick={()=>setOpen(true)} className="mt-2 py-2 w-20 rounded-2xl text-center text-white bg-blue-700 hover:bg-blue-800 cursor-pointer">
