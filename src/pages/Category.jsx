@@ -15,7 +15,7 @@ const Category = () => {
     <Layout>
       <main className='py-5 px-16'>
         <div>
-          <p onClick={()=>setOpen(true)} className="bg-green-600 cursor-pointer w-48 py-2 font-medium rounded-md items-end hover:bg-green-700 text-center text-white text-sm">
+          <p onClick={()=>setOpen(true)} className="bg-blue-800 cursor-pointer w-48 py-2 font-medium rounded-md items-end hover:bg-blue-900 text-center text-white text-sm">
             Add new Category
           </p>
         </div>

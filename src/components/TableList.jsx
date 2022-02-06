@@ -37,7 +37,7 @@ export default function TableList({ loading }) {
   }
    else if (state.productList <= 0 && state.search) {
     return (
-      <h1 className="flex items-center py-5 justify-center align-middle text-green-800 text-3xl font-bold h-full">
+      <h1 className="flex items-center py-5 justify-center align-middle text-blue-800 text-3xl font-bold h-full">
         No product found
       </h1>
     );
@@ -126,7 +126,7 @@ export default function TableList({ loading }) {
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                           <div
                             onClick={() => handleEdit(person)}
-                            className="text-green-600 cursor-pointer hover:text-green-900"
+                            className="text-blue-600 cursor-pointer hover:text-blue-900"
                           >
                             Edit
                           </div>

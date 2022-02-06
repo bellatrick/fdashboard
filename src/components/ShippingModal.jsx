@@ -8,17 +8,15 @@ import { FETCH_SHIPPING } from "../utils/Graphql";
 import { cloneDeep } from "@apollo/client/utilities";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { toast } from "react-toastify";
-export default function ShippingModal({ open, setOpen,id }) {
-
+export default function ShippingModal({ open, setOpen, id }) {
   const [UK, setUK] = useState("");
-  const [Nigeria,setNigeria] = useState('')
- 
+  const [Nigeria, setNigeria] = useState("");
+
   const [postShipping, { loading }] = useMutation(POST_SHIPPING, {
-    variables: { uKToNigeria:UK,nigeriaToUK:Nigeria, id },
+    variables: { uKToNigeria: UK, nigeriaToUK: Nigeria, id },
     update(proxy, result) {
-    
       setNigeria("");
-      setUK('')
+      setUK("");
       const data = cloneDeep(
         proxy.readQuery({
           query: FETCH_SHIPPING,
@@ -26,7 +24,7 @@ export default function ShippingModal({ open, setOpen,id }) {
         })
       );
 
-    //   data.getCategory.unshift(result.data.editShipping);
+      //   data.getCategory.unshift(result.data.editShipping);
 
       proxy.writeQuery({
         query: FETCH_SHIPPING,
@@ -92,16 +90,16 @@ export default function ShippingModal({ open, setOpen,id }) {
                 <div className="mt-3  sm:mt-5">
                   <Dialog.Title
                     as="h3"
-                    className="text-xl text-bold text-center leading-6 font-medium text-green-700"
+                    className="text-xl text-bold text-center leading-6 font-medium text-blue-700"
                   >
                     Edit Shipping Costs
                   </Dialog.Title>
-               
+
                   <div className="mr-6 mt-4 w-full">
                     <CustomInput
                       label="UK TO NIGERIA"
                       type="number"
-                     placeholder='In Euros'
+                      placeholder="In Euros"
                       id="name"
                       name="name"
                       value={UK}
@@ -113,7 +111,7 @@ export default function ShippingModal({ open, setOpen,id }) {
                     <CustomInput
                       label=" NIGERIA TO UK"
                       type="number"
-                      placeholder='In Naira'
+                      placeholder="In Naira"
                       id="name"
                       name="name"
                       value={Nigeria}
@@ -126,7 +124,7 @@ export default function ShippingModal({ open, setOpen,id }) {
               <div className="mt-5 sm:mt-6 px-32">
                 <button
                   type="submit"
-                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:text-sm"
+                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm"
                 >
                   {loading ? (
                     <LoadingSpinner
@@ -138,11 +136,8 @@ export default function ShippingModal({ open, setOpen,id }) {
                     "Submit"
                   )}
                 </button>
-                
               </div>
-
             </form>
-            
           </Transition.Child>
         </div>
       </Dialog>
@@ -150,8 +145,12 @@ export default function ShippingModal({ open, setOpen,id }) {
   );
 }
 const POST_SHIPPING = gql`
-  mutation ($uKToNigeria: String!, $nigeriaToUK: String!,$id:ID!) {
-    editShipping(uKToNigeria: $uKToNigeria, nigeriaToUK: $nigeriaToUK, id:$id) {
+  mutation ($uKToNigeria: String!, $nigeriaToUK: String!, $id: ID!) {
+    editShipping(
+      uKToNigeria: $uKToNigeria
+      nigeriaToUK: $nigeriaToUK
+      id: $id
+    ) {
       id
       nigeriaToUK
       uKToNigeria

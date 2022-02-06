@@ -15,7 +15,7 @@ const TextArea = ({placeholder, rows,label,id,name, onChange,value}) => {
                   rows={rows}
                   onChange={onChange}
                   placeholder={placeholder}
-                  className=" p-2 bg-gray-50  block w-full focus-within:border-transparent focus:ring-green-500 focus:border-green-500 sm:text-sm border border-green-300 rounded-md"
+                  className=" p-2 bg-gray-50  block w-full focus-within:border-transparent focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-blue-300 rounded-md"
                
                 />
                

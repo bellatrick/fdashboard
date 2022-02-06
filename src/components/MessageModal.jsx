@@ -53,17 +53,17 @@ export default function Example({ open, setOpen, person }) {
                   <div className="mt-2">
                     <div className="text-base m-3">
                       {" "}
-                      <span className='font-bold text-green-800'>Name</span>{" "}
+                      <span className='font-bold text-blue-800'>Name</span>{" "}
                       <p className="text-sm text-gray-500">{person?.name}</p>
                     </div>
                     <div className="text-base m-3">
-                      <span className='font-bold text-green-800'>Email</span>{" "}
+                      <span className='font-bold text-blue-800'>Email</span>{" "}
                       <p className="text-sm text-gray-500">
                        {person?.email}
                       </p>{" "}
                     </div>
                     <div className="text-base m-3">
-                      <span className='font-bold text-green-800'>Message</span>{" "}
+                      <span className='font-bold text-blue-800'>Message</span>{" "}
                       <p className="text-sm text-gray-500">
                        {person?.message}
                       </p>

@@ -33,7 +33,7 @@ export default function CategoryList({ data, loading }) {
                     className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                   />
                 </div>
-                <div className="mt-4 flex justify-between px-4 text-green-600">
+                <div className="mt-4 flex justify-between px-4 text-blue-600">
                   <p className="text-base text-center font-medium">
                     {product.name}
                   </p>

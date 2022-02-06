@@ -56,7 +56,7 @@ const Pagination = props => {
         // Render our Page Pills
         return (
           <li
-           className={`${pageNumber === currentPage?'text-white bg-green-500':'text-gray-600 '} rounded-full mr-2 text-lg font-bold px-4 cursor-pointer`}
+           className={`${pageNumber === currentPage?'text-white bg-blue-500':'text-gray-600 '} rounded-full mr-2 text-lg font-bold px-4 cursor-pointer`}
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}

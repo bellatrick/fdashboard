@@ -29,7 +29,7 @@ const DeskTopBar = () => {
   return (
     <div className="hidden lg:flex lg:flex-shrink-0 font-body">
       <div className="flex flex-col w-64">
-        <div className="flex flex-col flex-grow bg-green-800 pt-5 pb-4 overflow-y-auto relative">
+        <div className="flex flex-col flex-grow bg-blue-900 pt-5 pb-4 overflow-y-auto relative">
           <div className="flex items-center flex-shrink-0 -ml-10" >
             <img
               className="h-20 w-20 mb-5 mx-auto"
@@ -48,7 +48,7 @@ const DeskTopBar = () => {
                   key={item.name}
                   to={item.href}
                   
-                  className={({isActive})=>[" hover:text-white hover:bg-green-600 group flex items-center pl-8 px-2 py-4 text-lg  leading-6 font-medium rounded-md", isActive?" text-green-200 bg-green-600":'bg-white'].filter(Boolean).join()}
+                  className={({isActive})=>[" hover:text-white hover:bg-blue-600 group flex items-center pl-8 px-2 py-4 text-lg  leading-6 font-medium rounded-md", isActive?" text-blue-200 bg-blue-600":'bg-white'].filter(Boolean).join()}
                 >
                   <item.icon
                     className="mr-4 flex-shrink-0 h-6 w-6 text-white"
@@ -66,7 +66,7 @@ const DeskTopBar = () => {
                   <div
                   key={i}
                     onClick={logoutHandler}
-                    className="group flex items-center py-2 text-lg leading-6 pl-6 font-light tracking-wider rounded-md text-white  hover:bg-green-700"
+                    className="group flex items-center py-2 text-lg leading-6 pl-6 font-light tracking-wider rounded-md text-white  hover:bg-blue-700"
                   >
                     <item.icon
                       className="mr-4 h-6 w-6 text-white"

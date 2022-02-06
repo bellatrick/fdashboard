@@ -170,7 +170,7 @@ const AddProduct = () => {
                       src={image}
                       className="mr-6  rounded-lg w-96 h-56"
                     />
-                    {imageArr.length >= 1 ? "" : <p className='bg-green-600 w-28 font-bold tracking-wider text-white text-sm mt-3 rounded-3xl text-center py-2 hover:bg-gray-800'>Delete</p>}
+                    {imageArr.length >= 1 ? "" : <p className='bg-blue-600 w-28 font-bold tracking-wider text-white text-sm mt-3 rounded-3xl text-center py-2 hover:bg-gray-800'>Delete</p>}
                   </div>
                 ))
               : ""}
@@ -278,10 +278,10 @@ const AddProduct = () => {
         <div className="sm:px-16 mt-8 mx-auto">
           <button
             type="submit"
-            className="inline-flex justify-center w-72 rounded-md border border-transparent shadow-sm  py-2 bg-green-800 tracking-wide font-medium text-white hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
+            className="inline-flex justify-center w-72 rounded-md border border-transparent shadow-sm  py-2 bg-blue-800 tracking-wide font-medium text-white hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 "
           >
             {loading ? (
-              <LoadingSpinner height={"6"} width={"5"} color={"bg-green-200"} />
+              <LoadingSpinner height={"6"} width={"5"} color={"bg-blue-200"} />
             ) : (
               "Submit"
             )}

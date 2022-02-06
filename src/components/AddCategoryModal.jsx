@@ -135,7 +135,7 @@ export default function Example({ open, setOpen }) {
                 <div className="mt-3  sm:mt-5">
                   <Dialog.Title
                     as="h3"
-                    className="text-xl text-bold text-center leading-6 font-medium text-green-700"
+                    className="text-xl text-bold text-center leading-6 font-medium text-blue-700"
                   >
                     Add Category
                   </Dialog.Title>
@@ -178,7 +178,7 @@ export default function Example({ open, setOpen }) {
                         " Upload Image"
                       )}
                     </button>
-                    <p className="text-sm text-bold tracking-wider pb-10 text-green-600">
+                    <p className="text-sm text-bold tracking-wider pb-10 text-blue-600">
                       Click the upload image button after selecting all the
                       images you'd like to upload for this product.
                     </p>
@@ -200,7 +200,7 @@ export default function Example({ open, setOpen }) {
               <div className="mt-5 sm:mt-6 px-32">
                 <button
                   type="submit"
-                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:text-sm"
+                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm"
                 >
                   {loading ? (
                     <LoadingSpinner

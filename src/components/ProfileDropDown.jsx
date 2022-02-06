@@ -14,11 +14,14 @@ const ProfileDropDown = () => {
   useEffect(() => {
     if(state.userInfo){
       const data= jwt_decode(state.userInfo)
+      console.log(data)
      setUsername(data.username)
     }
 
   }, [state.userInfo])
+  console.log(username)
   return (
+
     <Menu as="div" className="ml-3 relative">
       <div>
         <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primarylight lg:p-2 lg:rounded-md lg:hover:bg-gray-100">

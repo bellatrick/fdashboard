@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { StoreProvider } from "./context/store";
 import Category from './pages/Category'
 import Login from './pages/Login'
-import Signup from './pages/Registration'
+//import Signup from './pages/Registration'
 import Messages from './pages/Messages'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
         <Route exact path="/" element={<Login/>} />
-        <Route exact path="/signup" element={<Signup/>} />
+        {/* <Route exact path="/signup" element={<Signup/>} /> */}
           <Route exact path="/products" element={<Dashboard />} />
           <Route exact path="/addproduct" element={<AddProduct />} />
           <Route exact path="/product/edit" element={<EditProduct />} />

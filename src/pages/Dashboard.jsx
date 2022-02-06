@@ -22,7 +22,7 @@ export default function Dashboard() {
   return (
     <Layout>
       <div className="px-16 pt-5">
-      {shippingLoading ? '':  <div className="text-green-900 ">
+      {shippingLoading ? '':  <div className="text-blue-900 ">
           <h2 className='text-xl font-bold mb-2'>Shipping Costs</h2>
         <div className='flex items-center'>
         <div className=' font-semibold mr-7 '>
@@ -30,7 +30,7 @@ export default function Dashboard() {
             <p className='mt-2'>Nigeria to Uk:  {NGFormat.format( shippingData?.getShipping[0].nigeriaToUK)}</p>
             <p className='mt-2'>UK to Nigeria:  {EUFormat.format( shippingData?.getShipping[0].uKToNigeria)} </p>
           </div>
-          <div onClick={()=>setOpen(true)} className="mt-2 py-2 w-20 rounded-2xl text-center text-white bg-green-700 hover:bg-green-800 cursor-pointer">
+          <div onClick={()=>setOpen(true)} className="mt-2 py-2 w-20 rounded-2xl text-center text-white bg-blue-700 hover:bg-blue-800 cursor-pointer">
             Edit
           </div>
         </div>

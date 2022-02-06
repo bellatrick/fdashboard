@@ -56,7 +56,7 @@ const MenuBar = ({sidebarOpen, setSidebarOpen}) => {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-green-700">
+            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-blue-900">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-300"
@@ -96,7 +96,7 @@ const MenuBar = ({sidebarOpen, setSidebarOpen}) => {
                   to={item.href}
                   
                  
-                  className={({isActive})=>["text-white hover:text-white hover:bg-green-600 group flex items-center pl-8 px-2 py-4 text-lg  leading-6 font-medium rounded-md", isActive?" text-green-200 bg-green-600":'bg-white'].filter(Boolean).join()}
+                  className={({isActive})=>["text-white hover:text-white hover:bg-blue-600 group flex items-center pl-8 px-2 py-4 text-lg  leading-6 font-medium rounded-md", isActive?" text-blue-200 bg-blue-600":'bg-white'].filter(Boolean).join()}
                 >
                   <item.icon
                     className="mr-4 flex-shrink-0 h-6 w-6 text-white"
@@ -115,7 +115,7 @@ const MenuBar = ({sidebarOpen, setSidebarOpen}) => {
                     key={item.name}
                   
                     onClick={logoutHandler}
-                    className="group flex items-center font-bold py-4 text-lg leading-6 pl-6 hover:bg-green-600 tracking-wider rounded-md text-white "
+                    className="group flex items-center font-bold py-4 text-lg leading-6 pl-6 hover:bg-blue-600 tracking-wider rounded-md text-white "
                   >
                     <item.icon
                       className="mr-4 h-6 w-6 text-white"
